@@ -13,3 +13,54 @@
  *= require_tree .
  *= require_self
  */
+
+/*
+*   Color palette
+*   https://coolors.co/264653-2a9d8f-e9c46a-648de5-e76f51
+*   
+*   264653 - Charcoal
+*   2A9D8F - Persian Green
+*   E9C46A - Maize Crayola
+*   648de5 - Cornflower Blue
+*   E76F51 - Burnt Sienna
+*/
+
+body {
+    background-color:  #264653;
+    color:  #FFF;
+    display:  grid;
+    grid-tempalte-rows: 1fr 3fr 1fr;
+}
+
+#header {
+    display:  flex;
+    justify-content:  space-between;
+    align-items:  center;
+    padding:  2rem;
+}
+
+#header a {
+    text-decoration: none;
+    font-size:  1.5rem;
+}
+
+ 
+/* For debug */
+/*body > div {
+    border:  2px solid yellow;
+}*/
+
+body a {
+    color:  #E9C46A;
+}
+
+#siteName {
+    color: #648de5;
+    font-size:  2.7rem;
+}
+
+#footer {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+}
