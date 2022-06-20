@@ -12,8 +12,14 @@
 
   <body>
     <div id="header">
-      <h3>Member's only</h3>
+      <h1 id="siteName">Member's Only</h1>
+      <%= link_to "Create a post", new_post_path %>
     </div>
-    <%= yield %>
+    <div id="mainContent">
+      <%= yield %>
+    </div>
+    <div id="footer">
+      <h4>&copy; 2022 Member's Only</h4>
+    </div>
   </body>
 </html>
