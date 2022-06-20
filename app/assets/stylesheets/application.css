@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+
+/*
+*   Color palette
+*   https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51
+*   
+*   264653 - Charcoal
+*   2A9D8F - Persian Green
+*   E9C46A - Maize Crayola
+*   F4A261 - Sandy Brown
+*   E76F51 - Burnt Sienna
+*/
+
+body {
+    background-color:  #264653;
+    color:  #FFF;
+}
+
+body a {
+    color:  #E9C46A;
+}
