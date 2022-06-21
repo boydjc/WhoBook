@@ -1,14 +1,33 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: #E9C46A"><%= notice %></p>
 
-<h1>Posts</h1>
-
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
+<div id="userTrendPostContainer">
+  <div id="userPosts">
+    <h2>Your Posts</h2>
+    <p>Post 1</p>
+    <p>Post 2</p>
+    <p>Post 3</p>
+    <p>Post 4</p>
+    <p>Post 5</p>
+  </div>
+  <div id="trendingPosts">
+    <h2>Trending Posts</h2>
+    <p>Post 1</p>
+    <p>Post 2</p>
+    <p>Post 3</p>
+    <p>Post 4</p>
+    <p>Post 5</p>
+  </div>
 </div>
 
-<%= link_to "New post", new_post_path %>
+<div id="feedContainer">
+  <h1>Posts</h1>
+
+  <div id="posts">
+    <% @posts.each do |post| %>
+      <%= render post %>
+      <p>
+        <%= link_to "Show this post", post %>
+      </p>
+    <% end %>
+  </div>
+</div>
