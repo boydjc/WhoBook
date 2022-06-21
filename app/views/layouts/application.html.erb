@@ -12,8 +12,12 @@
 
   <body>
     <div id="header">
-      <h1 id="siteName">Member's Only</h1>
-      <%= link_to "Create a post", new_post_path %>
+      <h1>Member's Only</h1>
+      <div id="navBar">
+        <%= link_to "Create a post", new_post_path %>
+        <p>Sign Up</p>
+        <p>Login</p>
+      </div>
     </div>
     <div id="mainContent">
       <%= yield %>

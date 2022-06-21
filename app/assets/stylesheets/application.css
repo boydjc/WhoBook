@@ -21,9 +21,14 @@
 *   264653 - Charcoal
 *   2A9D8F - Persian Green
 *   E9C46A - Maize Crayola
-*   648de5 - Cornflower Blue
-*   E76F51 - Burnt Sienna
+*   #AFFFAF - color that was made on the fly but still looks good
+*   #27FB6B - spring green
 */
+
+* {
+    margin:  0;
+    padding:  0;
+}
 
 body {
     background-color:  #264653;
@@ -33,15 +38,35 @@ body {
 }
 
 #header {
-    display:  flex;
-    justify-content:  space-between;
-    align-items:  center;
-    padding:  2rem;
+    display: flex;
+    padding: 2rem;
+    border-bottom: 2px solid #2A9D8F;
+    box-shadow: 2px 0px 9px 2px #000;
+    flex-flow:  row wrap;
+    justify-content: center;
+    gap: 5rem;
 }
 
-#header a {
+#header h1 {
+    flex:  1;
+    font-size:  5rem;
+    color: #AFFFAF;
+    text-shadow: -3px 3px #000;
+    text-align: center;
+}
+
+#navBar a, #navBar p {
     text-decoration: none;
-    font-size:  1.5rem;
+    font-size:  2rem;
+}
+
+#navBar {
+    display:  flex;
+    flex:  1;
+    justify-content: center;
+    align-items:  flex-end;
+    gap:  5rem;
+    text-align: center;
 }
 
  
@@ -52,11 +77,6 @@ body {
 
 body a {
     color:  #E9C46A;
-}
-
-#siteName {
-    color: #648de5;
-    font-size:  2.7rem;
 }
 
 #footer {
