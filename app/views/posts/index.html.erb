@@ -1,6 +1,15 @@
 <p style="color: #E9C46A"><%= notice %></p>
 
 <div id="userTrendPostContainer">
+  <div id="profileInfo">
+    <div>
+      <img height="96px" width="96px" src="https://bulma.io/images/placeholders/96x96.png">
+    </div>
+    <div>
+      <strong id="nameDisplay">Joshua Boyd</strong>
+      <span id="usernameDisplay">@boydjc</span>
+    </div>
+  </div>
   <div id="userPosts">
     <h2>Your Posts</h2>
     <p>Post 1</p>
@@ -21,13 +30,13 @@
 
 <div id="feedContainer">
   <h1>Posts</h1>
-
-  <div id="posts">
-    <% @posts.each do |post| %>
+  <% @posts.each do |post| %>
+    <div id="feedPost">
       <%= render post %>
       <p>
-        <%= link_to "Show this post", post %>
+       <%= link_to "Show this post", post %>
       </p>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
+
