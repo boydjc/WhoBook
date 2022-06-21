@@ -30,13 +30,15 @@
 
 <div id="feedContainer">
   <h1>Posts</h1>
-  <% @posts.each do |post| %>
-    <div id="feedPost">
-      <%= render post %>
-      <p>
-       <%= link_to "Show this post", post %>
-      </p>
-    </div>
-  <% end %>
+  <div id="feedPostContainer">  
+    <% @posts.each do |post| %>
+      <div id="feedPost">
+        <%= render post %>
+        <p>
+        <%= link_to "Show this post", post %>
+        </p>
+      </div>
+    <% end %>
+  </div>  
 </div>
 
