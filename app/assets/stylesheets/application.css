@@ -34,7 +34,7 @@ body {
     background-color:  #264653;
     color:  #FFF;
     display:  grid;
-    grid-tempalte-rows: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 0.5fr;
 }
 
 #header {
@@ -53,6 +53,7 @@ body {
     color: #AFFFAF;
     text-shadow: -3px 3px #000;
     text-align: center;
+    align-self: center;
 }
 
 #navBar a, #navBar p {
@@ -77,6 +78,10 @@ body {
 
 body a {
     color:  #E9C46A;
+}
+
+#mainContent {
+    display:  flex;
 }
 
 #footer {

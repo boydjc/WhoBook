@@ -1,0 +1,29 @@
+#userTrendPostContainer {
+	border:  1px solid yellow;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding:  3rem;
+}
+
+#userTrendPostContainer p {
+	margin-left: 1rem;
+	border: 1px solid #AFFFAF;
+	font-size:  1.2rem;
+	padding: 1rem;
+}
+
+#userPosts, #trendingPosts {
+	display:  flex;
+	flex-direction: column;
+	gap:  1rem;
+	padding:  1rem;
+	border:  2px dotted cyan;
+}
+
+#feedContainer {
+	border:  2px dashed magenta;
+	flex:  2;
+}
+
