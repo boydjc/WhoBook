@@ -1,21 +1,20 @@
 <div id="userTrendPostContainer">
-  <div id="profileInfo">
-    <div>
-      <img height="96px" width="96px" src="https://bulma.io/images/placeholders/96x96.png">
+  <% if user_signed_in? %>
+    <div id="profileInfo">
+      <div>
+        <img height="96px" width="96px" src="https://bulma.io/images/placeholders/96x96.png">
+      </div>
+      <div>
+        <strong id="usernameDisplay">@<%= current_user.username %></strong>
+      </div>
     </div>
-    <div>
-      <strong id="nameDisplay">Joshua Boyd</strong>
-      <span id="usernameDisplay">@boydjc</span>
+    <div id="userPosts">
+      <h2>Your Posts</h2>
+      <% current_user.posts.each do | post | %>
+        <p><%=link_to post.title, post_path(post) %></p>
+      <% end %>
     </div>
-  </div>
-  <div id="userPosts">
-    <h2>Your Posts</h2>
-    <p>Post 1</p>
-    <p>Post 2</p>
-    <p>Post 3</p>
-    <p>Post 4</p>
-    <p>Post 5</p>
-  </div>
+  <% end %>
   <div id="trendingPosts">
     <h2>Trending Posts</h2>
     <p>Post 1</p>

@@ -19,7 +19,7 @@
         <div class="alert"><%= alert %></div>
     <% end %>
     <div id="header">
-      <h1>Member's Only</h1>
+      <h1><%= link_to "Member's Only", posts_path %></h1>
       <div id="navBar">
         <%= link_to "Create a post", new_post_path %>
         <% if user_signed_in? %>
