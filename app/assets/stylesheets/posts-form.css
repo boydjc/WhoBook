@@ -1,0 +1,30 @@
+.simple_form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.input {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+input[type="text"], textarea {
+	font-size: 1.2rem;
+}
+
+textarea {
+	resize: none;
+	height: 100px;
+	width: 100%;
+}
+
+label {
+	font-size: 1.5rem;
+}
+
+.post_title input {
+	height: 30px;
+	width: 300px;
+}

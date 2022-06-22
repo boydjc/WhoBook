@@ -3,11 +3,11 @@
     <%= post.title %>
   </h2>
   <% if user_signed_in? %>
-    <p>
+    <p class="author">
       Author: <%= post.user.username %>
     </p>
   <% else %>
-    <p><i>Sign in to see who wrote this post!</i></p>
+    <p class="author"><i>Sign in to see who wrote this post!</i></p>
   <% end %>
 </div>
 <div class="feedPostBody">

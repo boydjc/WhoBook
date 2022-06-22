@@ -61,6 +61,11 @@
 	box-shadow: -1px 1px 3px 1px #000;
 }
 
+#newPostFormContainer {
+	/*border: 2px dashed yellow;*/
+	padding: 2rem;
+}
+
 
 #feedContainer {
 	flex:  2;
@@ -101,5 +106,10 @@
 }
 
 .feedPostTitle {
-	font-size: 1.5rem;
+	font-size: 2rem;
 }
+
+.feedPostText, .author {
+	font-size: 1.2rem;
+}
+

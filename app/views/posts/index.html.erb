@@ -26,6 +26,12 @@
 </div>
 
 <div id="feedContainer">
+  <% if user_signed_in? %>
+    <h1>Create a post!</h1>
+    <div id="newPostFormContainer">
+      <%= render 'posts/form', post: @post %>
+    </div>
+  <% end %>
   <h1>Posts</h1>
   <div id="feedPostContainer">  
     <% @posts.each do |post| %>
