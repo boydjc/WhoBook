@@ -16,13 +16,14 @@
 
 /*
 *   Color palette
-*   https://coolors.co/264653-2a9d8f-e9c46a-648de5-e76f51
+*   https://coolors.co/264653-2a9d8f-e9c46a-afffaf-e76f51-27fb6b
 *   
 *   264653 - Charcoal
 *   2A9D8F - Persian Green
 *   E9C46A - Maize Crayola
-*   #AFFFAF - color that was made on the fly but still looks good
+*   #AFFFAF - Mint Green
 *   #27FB6B - spring green
+*   #E76F51 - Burnt sienna
 */
 
 * {
@@ -34,15 +35,72 @@ body {
     background-color:  #264653;
     color:  #FFF;
     display:  grid;
-    grid-template-rows: 0.2fr auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+}
+
+@keyframes noticeAlertSlideIn{
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    15.5% {
+        transform: translateY(50px);
+        opacity: 1;
+    }
+
+    37.5% {
+        transform: translateY(50px);
+        opacity: 1;
+    }
+
+    62.5% {
+        transform: translateY(50px);
+        opacity: 1;
+    }
+
+    85.5% {
+        transform: translateY(50px);
+        opacity: 1;
+    }
+
+    100% {
+        transform:  translateY(-50px);
+        opacity: 0;
+    }
 }
 
 .notice {
+    position: absolute;
+    top: -50px;
+    width: 100%;
     display: flex;
     background-color: #27FB6B;
     color: #264652;
     align-items: center;
     padding: 1rem;
+    animation-name: noticeAlertSlideIn;
+    animation-duration: 4s;
+    animation-direction: forwards;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+}
+
+.alert {
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    display: flex;
+    background-color: #E76F51;
+    color: #264652;
+    align-items: center;
+    padding: 1rem;
+    animation-name: noticeAlertSlideIn;
+    animation-duration: 4s;
+    animation-direction: forwards;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in-out;
 }
 
 #header {
