@@ -22,8 +22,12 @@
       <h1>Member's Only</h1>
       <div id="navBar">
         <%= link_to "Create a post", new_post_path %>
-        <p>Sign Up</p>
-        <p>Login</p>
+        <% if user_signed_in? %>
+          <%= link_to "Sign out", destroy_user_session_path, data: {turbo_method: :delete} %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path %>
+          <%= link_to "Login", new_user_session_path %>
+        <% end %>
       </div>
     </div>
     <div id="mainContent">
