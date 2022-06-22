@@ -109,12 +109,11 @@ body {
     border-bottom: 2px solid #2A9D8F;
     box-shadow: 2px 4px 9px -2px #000;
     flex-flow:  row wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 5rem;
 }
 
 #header h1 {
-    flex:  1;
     text-align: center;
     align-self: center;
 }
@@ -133,18 +132,11 @@ body {
 
 #navBar {
     display:  flex;
-    flex:  1;
     justify-content: center;
     align-items:  flex-end;
     gap:  5rem;
     text-align: center;
 }
-
- 
-/* For debug */
-/*body > div {
-    border:  2px solid yellow;
-}*/
 
 body a {
     color:  #E9C46A;
