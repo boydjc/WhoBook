@@ -34,14 +34,22 @@ body {
     background-color:  #264653;
     color:  #FFF;
     display:  grid;
-    grid-template-rows: 0.7fr 4fr 0.2fr;
+    grid-template-rows: 0.2fr auto 1fr auto;
+}
+
+.notice {
+    display: flex;
+    background-color: #27FB6B;
+    color: #264652;
+    align-items: center;
+    padding: 1rem;
 }
 
 #header {
     display: flex;
     padding: 2rem;
     border-bottom: 2px solid #2A9D8F;
-    box-shadow: 2px 0px 9px 2px #000;
+    box-shadow: 2px 4px 9px -2px #000;
     flex-flow:  row wrap;
     justify-content: center;
     gap: 5rem;
@@ -88,5 +96,7 @@ body a {
     display:  flex;
     justify-content: center;
     align-items: center;
-    border-top: 2px solid #000;
+    /*border-top: 2px solid #000;*/
+    border: 2px dashed yellow;
+    justify-self: bottom;
 }

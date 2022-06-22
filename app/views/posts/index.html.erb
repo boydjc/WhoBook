@@ -1,5 +1,3 @@
-<p style="color: #E9C46A"><%= notice %></p>
-
 <div id="userTrendPostContainer">
   <div id="profileInfo">
     <div>
@@ -34,9 +32,6 @@
     <% @posts.each do |post| %>
       <div id="feedPost">
         <%= render post %>
-        <p>
-        <%= link_to "Show this post", post %>
-        </p>
       </div>
     <% end %>
   </div>  

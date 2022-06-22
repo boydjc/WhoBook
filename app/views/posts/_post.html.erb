@@ -1,9 +1,15 @@
-<div id="<%= dom_id post %>">
+<div class="feedPostHeader">
+  <h2 class="feedPostTitle">
+    <%= post.title %>
+  </h2>
   <p>
-    <strong>Title: <%= post.title %></strong>
-    <br>
-    <strong>Text: </strong>
+    Author: @boydjc
+  </p>
+</div>
+<div class="feedPostBody">
+  <p class="feedPostText">
     <%= post.text %>
   </p>
-
 </div>
+<%=link_to "See more", post %>
+
