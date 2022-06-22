@@ -2,9 +2,13 @@
   <h2 class="feedPostTitle">
     <%= post.title %>
   </h2>
-  <p>
-    Author: @boydjc
-  </p>
+  <% if user_signed_in? %>
+    <p>
+      Author: <%= post.user.username %>
+    </p>
+  <% else %>
+    <p><i>Sign in to see who wrote this post!</i></p>
+  <% end %>
 </div>
 <div class="feedPostBody">
   <p class="feedPostText">
