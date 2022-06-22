@@ -61,12 +61,6 @@
 	box-shadow: -1px 1px 3px 1px #000;
 }
 
-#newPostFormContainer {
-	/*border: 2px dashed yellow;*/
-	padding: 2rem;
-}
-
-
 #feedContainer {
 	flex:  2;
 	display: flex;
