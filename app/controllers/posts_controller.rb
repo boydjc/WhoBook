@@ -52,7 +52,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1 or /posts/1.json
   def destroy
 
-    if current_user.username == @post.username
+    if current_user == @post.user
       @post.destroy
 
       respond_to do |format|
@@ -61,7 +61,7 @@ class PostsController < ApplicationController
       end
     else
       respond_to do |format|
-        format.html {redirect_to posts_url, alert: "You are not the author of this post."}
+        format.html {redirect_to @post, alert: "You are not the author of this post."}
       end
     end
   end

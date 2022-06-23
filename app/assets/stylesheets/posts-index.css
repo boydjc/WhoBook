@@ -130,6 +130,11 @@ hr {
 	font-size: 1.2rem;
 }
 
+.feedPostMoreInfo {
+	display: flex;
+	justify-content: space-between;
+}
+
 #noPostMsg {
 	font-size: 1.3rem;
 }
