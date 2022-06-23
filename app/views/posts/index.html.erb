@@ -28,13 +28,6 @@
 </div>
 
 <div id="feedContainer">
-  <% if user_signed_in? %>
-    <h1>Create a post!</h1>
-    <div id="newPostFormContainer">
-      <%= render 'posts/form', post: @post %>
-    </div>
-    <hr>
-  <% end %>
   <h1>Posts</h1>
   <div id="feedPostContainer">
     <% if @posts.any? %>  
@@ -50,6 +43,13 @@
         <p id="noPostMsg">There are no posts. Sign in and make history today!</p>
       <% end %>
     <% end %>
-  </div>  
+  </div>
+  <% if user_signed_in? %>
+    <hr>
+    <h1>Create a post!</h1>
+    <div id="newPostFormContainer">
+      <%= render 'posts/form', post: @post %>
+    </div>
+  <% end %>  
 </div>
 
