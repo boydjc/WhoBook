@@ -8,14 +8,16 @@
         <strong id="usernameDisplay">@<%= current_user.username %></strong>
       </div>
     </div>
-    <div id="userPosts">
+    <div id="userPostsContainer">
       <h2>Your Posts</h2>
-      <% current_user.posts.each do | post | %>
-        <p><%=link_to post.title, post_path(post) %></p>
-      <% end %>
+      <div id="userPosts">
+        <% current_user.posts.each do | post | %>
+          <p><%=link_to post.title, post_path(post) %></p>
+        <% end %>
+      </div>
     </div>
   <% end %>
-  <div id="trendingPosts">
+  <div id="trendingPostsContainer">
     <h2>Trending Posts</h2>
     <p>Post 1</p>
     <p>Post 2</p>
@@ -31,13 +33,22 @@
     <div id="newPostFormContainer">
       <%= render 'posts/form', post: @post %>
     </div>
+    <hr>
   <% end %>
   <h1>Posts</h1>
-  <div id="feedPostContainer">  
-    <% @posts.each do |post| %>
-      <div id="feedPost">
-        <%= render post %>
-      </div>
+  <div id="feedPostContainer">
+    <% if @posts.any? %>  
+      <% @posts.each do |post| %>
+        <div id="feedPost">
+          <%= render post %>
+        </div>
+      <% end %>
+    <% else %>
+      <% if user_signed_in? %>
+        <p id="noPostMsg">There are no posts. Be the one to make history today!</p>
+      <% else %>
+        <p id="noPostMsg">There are no posts. Sign in and make history today!</p>
+      <% end %>
     <% end %>
   </div>  
 </div>
