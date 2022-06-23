@@ -15,5 +15,12 @@
     <%= post.text %>
   </p>
 </div>
-<%=link_to "See more", post %>
+<div class="feedPostMoreInfo">
+  <%=link_to "See more", post %>
+  <% if user_signed_in? %>
+    <p>
+      Created on <%= post.created_at.to_date.to_formatted_s(:long_ordinal) %> 
+    </p>
+  <% end %>
+</div>
 
