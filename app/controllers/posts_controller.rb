@@ -6,10 +6,17 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.order("created_at DESC")
     @post = Post.new
+
+    if user_signed_in?
+      @user = current_user
+    end
   end
 
   # GET /posts/1 or /posts/1.json
   def show
+    if user_signed_in?
+      @user = current_user
+    end
   end
 
   # GET /posts/new
