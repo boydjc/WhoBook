@@ -21,6 +21,13 @@
     <p>
       Created on <%= post.created_at.to_date.to_formatted_s(:long_ordinal) %> 
     </p>
+    <p>
+      <% if @user.likes.find_by(post_id: post.id) %>
+        <%= link_to "Unlike", like_path(id: @user.likes.find_by(post_id: post.id).id), data: {turbo_method: :delete} %>
+      <% else %>
+        <%= link_to "Like", likes_path(user_id: current_user.id, post_id: post.id), data: {turbo_method: :post} %>
+      <% end %>
+    </p>
   <% end %>
 </div>
 
