@@ -10,11 +10,23 @@
 	font-size: 2rem;
 }
 
-#userTrendPostContainer p {
+#userTrendPostContainer button {
 	border: 1px solid #AFFFAF;
+	background-color: #264653;
 	border-radius:  20px;
-	font-size:  1.2rem;
+	font-size:  1.1rem;
+	color:  #E9C46A;
 	padding: 1rem;
+	width: 100%;
+	text-align: left;
+	-webkit-appearance: none;
+	cursor: pointer;
+}
+
+#userTrendPostContainer button:hover {
+	color:  #264653;
+	background-color: #E9C46A;
+	border:  1px solid #000;
 }
 
 #profileInfo {
@@ -67,6 +79,7 @@
 #userPostsContainer a, #userLikedPostsContainer a, #trendingPostsContainer a {
 	text-decoration: none;
 }
+
 
 #userPosts, #userLikedPosts {
 	display: flex;
