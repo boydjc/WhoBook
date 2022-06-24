@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.order("created_at DESC")
     @post = Post.new
+    @top_five_posts = Like.top_five
 
     if user_signed_in?
       @user = current_user

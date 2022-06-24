@@ -7,9 +7,9 @@ class LikesController < ApplicationController
 
     respond_to do |format|
       if @like.save
-        format.html { redirect_to posts_path, notice: "Like was successfully created." }
+        format.html { redirect_to posts_path }
       else
-        format.html { redirect_to posts_path, alert: "Like was unsuccessful" }
+        format.html { redirect_to posts_path, alert: "Error liking post" }
       end
     end
   end
@@ -21,7 +21,7 @@ class LikesController < ApplicationController
     @like.destroy
 
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: "Like was successfully destroyed." }
+      format.html { redirect_to posts_url }
       format.json { head :no_content }
     end
   end

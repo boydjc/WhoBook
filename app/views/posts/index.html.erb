@@ -8,22 +8,32 @@
         <strong id="usernameDisplay">@<%= current_user.username %></strong>
       </div>
     </div>
-    <div id="userPostsContainer">
-      <h2>Your Posts</h2>
-      <div id="userPosts">
-        <% current_user.posts.each do | post | %>
-          <p><%=link_to post.title, post_path(post) %></p>
-        <% end %>
+    <% if current_user.posts.any? %>
+      <div id="userPostsContainer">
+        <h2>Your Posts</h2>
+        <div id="userPosts">
+          <% current_user.posts.each do | post | %>
+            <p><%=link_to post.title, post_path(post) %></p>
+          <% end %>
+        </div>
       </div>
-    </div>
+    <% end %>
+    <% if current_user.likes.any? %>
+      <div id="userLikedPostsContainer">
+        <h2>Liked Posts</h2>
+        <div id="userLikedPosts">
+          <% current_user.likes.each do | like | %>
+            <p><%=link_to like.post.title, post_path(like.post) %></p>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
   <% end %>
   <div id="trendingPostsContainer">
-    <h2>Trending Posts</h2>
-    <p>Post 1</p>
-    <p>Post 2</p>
-    <p>Post 3</p>
-    <p>Post 4</p>
-    <p>Post 5</p>
+    <h2>Top Posts</h2>
+    <% @top_five_posts.each do | post | %>
+      <p><%= link_to Post.find(post.post_id).title, post_path(Post.find(post.post_id)) %></p>
+    <% end %>
   </div>
 </div>
 
