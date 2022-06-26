@@ -1,0 +1,68 @@
+#forgotPwdContainer {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	padding: 4rem;
+}
+
+#forgotPwdContainer a {
+	font-size: 1.2rem;
+}
+
+#forgotPwdContainer h2 {
+	font-size: 2.7rem;
+}
+
+#forgotPwdContainer .new_user {
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+}
+
+#forgotPwdContainer .new_user .input {
+	display: flex;	
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+#forgotPwdContainer .new_user .input label {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+#forgotPwdContainer .new_user .input input[type="email"] {
+	font-size: 1.2rem;
+	height: 30px;
+	width: 300px;
+}
+
+#forgotPwdContainer .new_user .form-inputs, .new_user .form-actions {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: center;
+}
+
+#forgotPwdContainer .new_user .btn {
+	font-size: 1.3rem;
+	padding: 0.5rem;
+	border: 1px solid #000;
+	box-shadow: 0px 2px 1px 3px #000;
+	border-radius: 20px;
+	background-color: #AFFFAF;
+	-webkit-appearance: none;
+	transition: background-color 0.3s;
+}
+
+#forgotPwdContainer .new_user .btn:hover {
+	background-color: #E76F51;
+	cursor: pointer;
+}
+
+#forgotPwdContainer .new_user .btn:active {
+	box-shadow: 0px 2px 1px 0px #000;
+	transform: translateY(5px);
+}
