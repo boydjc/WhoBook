@@ -17,7 +17,7 @@
 	gap: 1rem;
 }
 
-#new_post .input input[type="text"], textarea {
+#new_post .input input[type="text"], #new_post .input textarea {
 	font-size: 1.2rem;
 	height: 30px;
 	width: 300px;
@@ -25,7 +25,7 @@
 	box-shadow: 0px 1px 3px #000;
 }
 
-#new_post .input input[type="text"]:focus, textarea:focus {
+#new_post .input input[type="text"]:focus, #new_post .input textarea:focus {
 	outline: none;
 	border: 2px solid #27FB6B;
 }

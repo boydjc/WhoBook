@@ -31,7 +31,7 @@
 
 #profileInfo {
 	display: flex;
-	padding:  0.5rem;
+	padding:  1rem;
 	border:  2px solid #2A9D8F;
 	border-radius: 20px;
 	box-shadow: -1px 1px 3px 1px #000;
@@ -40,6 +40,8 @@
 
 #profileInfo img {
 	border-radius: 50%;
+	height: 96px;
+	width: 96px;
 }
 
 #profileInfo div:first-child {
@@ -141,6 +143,10 @@ hr {
 
 .feedPostText, .author {
 	font-size: 1.2rem;
+}
+
+.feedPostText {
+	white-space: break-spaces;
 }
 
 .feedPostMoreInfo {

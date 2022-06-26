@@ -140,6 +140,7 @@ body {
 
 body a {
     color:  #E9C46A;
+    text-decoration: none;
 }
 
 #mainContent {
