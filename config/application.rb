@@ -20,3 +20,8 @@ module MembersOnly
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+
+# getting hash generated profile image from gravatar
+def user_avatar user
+ "https://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(user.email.downcase)}?size=150&d=identicon"
+end

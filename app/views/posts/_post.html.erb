@@ -5,6 +5,7 @@
   <% if user_signed_in? %>
     <p class="author">
       Author: <%= post.user.username %>
+      <img src="<%= user_avatar(post.user) %>"> 
     </p>
   <% else %>
     <p class="author"><i>Sign in to see who wrote this post!</i></p>
