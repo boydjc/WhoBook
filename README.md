@@ -1,24 +1,12 @@
-# README
+# WhoBook
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+WhoBook is a site that values anonimity for non-registered users of the site. In this site, users are able to make a post for other's to read. However, visitors who do not have an account will not be able to see which user wrote the post. This site was created for learning purposes during The Odin Project. It is written using Ruby on Rails and utilizes the Devise gem for authentication. 
 
-Things you may want to cover:
 
-* Ruby version
+The site is deployed to Heroku using their free plan.
 
-* System dependencies
+You can visit the site at <a href="https://whobook.herokuapp.com">whobook.herokuapp.com</a>
 
-* Configuration
+<img src="https://raw.githubusercontent.com/boydjc/WhoBook/main/Screen%20Shot%201.png">
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<img src="https://raw.githubusercontent.com/boydjc/WhoBook/main/Screen%20Shot%202.png">
