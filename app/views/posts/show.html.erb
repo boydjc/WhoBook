@@ -5,7 +5,7 @@
     <% if user_signed_in? %>
       <p id="author">
         Written by: 
-        <%= gravatar_image_tag(@post.user.email, size: 64, alt: @post.user.username) %>
+        <img src="<%= user_avatar(@post.user) %>">
         <%= @post.user.username %>
       </p>
     <% else %>

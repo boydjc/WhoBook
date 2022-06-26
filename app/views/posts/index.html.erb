@@ -3,7 +3,7 @@
     <% if user_signed_in? %>
       <div id="profileInfo">
         <div>
-          <%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.username) %>
+          <img src="<%= user_avatar(current_user) %>">
         </div>
         <div>
           <strong id="usernameDisplay"><%= current_user.username %></strong>
@@ -61,6 +61,7 @@
               <% if user_signed_in? %>
                 <p class="author">
                   Author: <%= post.user.username %>
+                  <img src="<%= user_avatar(post.user) %>"> 
                 </p>
               <% else %>
                 <p class="author"><i>Sign in to see who wrote this post!</i></p>
