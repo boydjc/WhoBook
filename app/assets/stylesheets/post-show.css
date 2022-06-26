@@ -1,0 +1,40 @@
+#showContainer {
+	display: flex;
+	flex-direction: column;
+	padding: 3rem;
+	gap: 2rem;
+	flex: 1;
+}
+
+#postTitleContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#postTitleContainer h1 {
+	font-size: 4rem;
+}
+
+#postTitleContainer p {
+	font-size: 1.3rem;
+}
+
+#postBodyContainer p {
+	font-size: 1.5rem;
+}
+
+#postLinksContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+#postEditDeleteContainer {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+}
+
+#showContainer a {
+	font-size: 1.2rem;
+}
