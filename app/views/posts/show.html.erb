@@ -3,11 +3,25 @@
   <div id="postTitleContainer">
     <h1><%= @post.title %></h1>
     <% if user_signed_in? %>
-      <p class="author">
-        Written by: <%= @post.user.username %>
+      <p id="author">
+        Written by: 
+        <%= gravatar_image_tag(@post.user.email, size: 64, alt: @post.user.username) %>
+        <%= @post.user.username %>
       </p>
     <% else %>
       <p class="author"><i>Sign in to see who wrote this post!</i></p>
+    <% end %>
+  </div>
+
+  <div id="postMoreInfoContainer">
+    <p>
+      Created on: <%= @post.created_at.to_date.to_formatted_s(:long_ordinal) %> 
+    </p>
+
+    <% if @post.likes %>
+      <p>
+        Likes: <%= @post.likes.count %>
+      </p>
     <% end %>
   </div>
 

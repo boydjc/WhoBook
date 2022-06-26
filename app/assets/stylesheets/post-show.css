@@ -13,15 +13,23 @@
 }
 
 #postTitleContainer h1 {
-	font-size: 4rem;
+	font-size: 3rem;
 }
 
 #postTitleContainer p {
-	font-size: 1.3rem;
+	font-size: 1.2rem;
+}
+
+#postMoreInfoContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	font-size: 1.2rem;
 }
 
 #postBodyContainer p {
-	font-size: 1.5rem;
+	font-size: 1.2rem;
+	white-space: break-spaces;
 }
 
 #postLinksContainer {
@@ -37,4 +45,17 @@
 
 #showContainer a {
 	font-size: 1.2rem;
+}
+
+#author {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+#author img {
+	border-radius: 50%;
+	height: 48px;
+	width: 48px;
 }
