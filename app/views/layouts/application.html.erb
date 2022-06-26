@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MembersOnly</title>
+    <title>WhoBook</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -24,7 +24,7 @@
         <div class="alert"><%= alert %></div>
     <% end %>
     <div id="header">
-      <h1><%= link_to "Member's Only", posts_path %></h1>
+      <h1><%= link_to "WhoBook", posts_path %></h1>
       <div id="navBar">
         <% if user_signed_in? %>
           <%= link_to "Sign out", destroy_user_session_path, data: {turbo_method: :delete} %>
@@ -38,7 +38,7 @@
       <%= yield %>
     </div>
     <div id="footer">
-      <h4>&copy; 2022 Member's Only</h4>
+      <h4>&copy; 2022 WhoBook Inc.</h4>
     </div>
   </body>
 </html>
