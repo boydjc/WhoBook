@@ -1,10 +1,27 @@
-<p style="color: #E9C46A"><%= notice %></p>
+<div id="showContainer">
 
-<%= render @post %>
+  <div id="postTitleContainer">
+    <h1><%= @post.title %></h1>
+    <% if user_signed_in? %>
+      <p class="author">
+        Written by: <%= @post.user.username %>
+      </p>
+    <% else %>
+      <p class="author"><i>Sign in to see who wrote this post!</i></p>
+    <% end %>
+  </div>
 
-<div>
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
-  <%= link_to "Back to posts", posts_path %>
+  <div id="postBodyContainer">
+    <p><%= @post.text %></p>
+  </div>
 
-  <%= button_to "Destroy this post", @post, method: :delete %>
-</div>
+  <div id="postLinksContainer">
+    <%= link_to "Back to posts", posts_path %>
+    <% if user_signed_in? && current_user == @post.user %>
+      <div id="postEditDeleteContainer">
+        <%= link_to "Edit this post", edit_post_path(@post) %>
+        <%= link_to "Destroy this post", @post, method: :delete %>
+      </div>
+    <% end %>
+  </div>
+</div> 
