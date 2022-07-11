@@ -106,7 +106,7 @@ body {
     display: flex;
     padding: 2rem;
     border-bottom: 2px solid var(--light-color-black);
-    box-shadow: 2px 4px 9px -2px var(--light-color-black);
+    /*box-shadow: 2px 4px 9px -2px var(--light-color-black);*/
     flex-flow:  row wrap;
     justify-content: space-between;
     gap: 5rem;
