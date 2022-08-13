@@ -1,4 +1,4 @@
-#registerFormContainer {
+#registerFormContainer, #loginFormContainer {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
@@ -8,71 +8,70 @@
 	padding: 4rem;
 }
 
-#registerFormContainer h1 {
+#registerFormContainer h1, #loginFormContainer h1 {
 	font-size: 2.7rem;
 }
 
-#registerFormContainer .new_user {
+#registerFormContainer .new_user, #loginFormContainer .new_user {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
 }
 
-#registerFormContainer .new_user .input {
+#registerFormContainer .new_user .input, #loginFormContainer .new_user .input {
 	display: flex;	
 	flex-direction: column;
 	gap: 0.5rem;
 }
 
-#registerFormContainer .new_user .checkbox {
+#registerFormContainer .new_user .checkbox, #loginFormContainer .new_user .checkbox {
 	padding: 1rem;
 }
 
-#registerFormContainer .new_user .checkbox input {
+#registerFormContainer .new_user .checkbox input, #loginFormContainer .new_user .checkbox input {
 	margin-right: 1rem;
 	height: 20px;
 	width: 20px;
 }
 
-#registerFormContainer .new_user .input label {
+#registerFormContainer .new_user .input label, #loginFormContainer .new_user .input label {
 	font-size: 1.2rem;
 	font-weight: bold;
 }
 
 #registerFormContainer .new_user .input input[type="text"], 
 #registerFormContainer .new_user .input input[type="password"],
-#registerFormContainer .new_user .input input[type="email"] {
+#registerFormContainer .new_user .input input[type="email"],
+#loginFormContainer .new_user .input input[type="text"],
+#loginFormContainer .new_user .input input[type="password"],
+#loginFormContainer .new_user .input input[type="email"] {
 	font-size: 1.2rem;
 	height: 30px;
 	width: 300px;
 }
 
-#registerFormContainer .new_user .form-inputs, .new_user .form-actions {
+#registerFormContainer .new_user .form-inputs, .new_user .form-actions,
+#loginFormContainer .new_user .form-inputs {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
 	align-items: center;
 }
 
-#registerFormContainer .new_user .btn {
+#registerFormContainer .new_user .btn, #loginFormContainer .new_user .btn {
 	font-size: 1.3rem;
-	padding: 0.5rem;
-	border: 1px solid var(--light-color-black);
-	box-shadow: 0px 2px 1px 3px var(--light-color-black);
-	border-radius: 20px;
-	background-color: var(--light-color-blue);
-	color: var(--light-color-white);
-	-webkit-appearance: none;
-	transition: background-color 0.3s, color 0.3s;
+	color: var(--color-scheme-three);
+    background-color: var(--color-scheme-one);
+    border: 2px solid black;
+    height: 40px;
+    width: 100px;
+    box-shadow: 0px 2px 0px #000;
+    border-radius: 10px;
+    transition: box-shadow 0.3s, transform 0.3s;
 }
 
-#registerFormContainer .new_user .btn:hover {
-	background-color: var(--light-color-yellow);
-	color:  var(--light-color-black);
+#registerFormContainer .new_user .btn:hover, #loginFormContainer .new_user .btn:hover {
 	cursor: pointer;
-}
-
-#registerFormContainer .new_user .btn:active {
-	box-shadow: 0px 2px 1px 0px #000;
-	transform: translateY(5px);
+    box-shadow: none;
+    transform: translateY(3px);
 }
