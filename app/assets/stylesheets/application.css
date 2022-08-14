@@ -16,11 +16,12 @@
 
 :root {
 
-    --color-scheme-one: #2b6777;
+    --color-scheme-one: #163D91;
     --color-scheme-two: #c8d8e4; 
     --color-scheme-three: #ffffff; 
     --color-scheme-four: #f2f2f2;
-    --color-scheme-five: #52ab98;
+    --color-scheme-five: #009cc7;
+    --color-scheme-six: #000000;
 }
 
 
@@ -31,7 +32,7 @@
 
 body {
     background-color:  var(--color-scheme-three);
-    color:  var(--color-scheme-one);
+    color: var(--color-scheme-six);
     display:  grid;
     grid-template-rows: auto 1fr auto;
 }

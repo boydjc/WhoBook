@@ -29,12 +29,16 @@
     <p><%= @post.text %></p>
   </div>
 
-  <div id="postLinksContainer">
-    <%= link_to "Back to posts", posts_path %>
+  <div id="postLinksContainer" >
+    <%= button_to "Back to posts", posts_path, method: :get %>
     <% if user_signed_in? && current_user == @post.user %>
       <div id="postEditDeleteContainer">
-        <%= link_to "Edit this post", edit_post_path(@post) %>
-        <%= link_to "Destroy this post", @post, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+        <div id="postEditLink">
+          <%= button_to "Edit this post", edit_post_path(@post), method: :get %>
+        </div>
+        <div id="postDeleteLink" data-controller="posts">
+          <%= button_to "Delete this post", @post, method: :delete, data: { action: "click->posts#delete" } %>
+        </div>
       </div>
     <% end %>
   </div>
