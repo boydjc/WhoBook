@@ -4,7 +4,7 @@
     <h1><%= @post.title %></h1>
     <% if user_signed_in? %>
       <p id="author">
-        Written by: 
+        <strong>Written by: </strong>
         <img src="<%= user_avatar(@post.user) %>">
         <%= @post.user.username %>
       </p>
@@ -15,12 +15,12 @@
 
   <div id="postMoreInfoContainer">
     <p>
-      Created on: <%= @post.created_at.to_date.to_formatted_s(:long_ordinal) %> 
+      <strong>Created on:</strong> <%= @post.created_at.to_date.to_formatted_s(:long_ordinal) %> 
     </p>
 
     <% if @post.likes %>
       <p>
-        Likes: <%= @post.likes.count %>
+        <strong>Likes:</strong> <%= @post.likes.count %>
       </p>
     <% end %>
   </div>
