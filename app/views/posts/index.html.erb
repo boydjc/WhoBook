@@ -32,7 +32,11 @@
     <% end %>
     <% if @top_five_posts.any? %>
       <div id="trendingPostsContainer">
-        <h2>Top 5 Posts</h2>
+        <% if @top_five_posts.each.count >= 5 %>
+          <h2>Top 5 Posts</h2>
+        <% else %>
+          <h2>Top <%= @top_five_posts.each.count %> Posts</h2>
+        <% end %>
         <% @top_five_posts.each do | post | %>
           <%= button_to Post.find(post.post_id).title, post_path(id: post.post_id), method: :get %>
         <% end %>
