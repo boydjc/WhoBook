@@ -67,11 +67,13 @@
     width: 100px;
     box-shadow: 0px 2px 0px #000;
     border-radius: 10px;
-    transition: box-shadow 0.3s, transform 0.3s;
+    transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s, color 0.3s; 
 }
 
 #registerFormContainer .new_user .btn:hover, #loginFormContainer .new_user .btn:hover {
 	cursor: pointer;
     box-shadow: none;
     transform: translateY(3px);
+    background-color: var(--color-scheme-two);
+    color: var(--color-scheme-one);
 }

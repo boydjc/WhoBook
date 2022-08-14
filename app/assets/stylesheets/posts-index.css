@@ -3,7 +3,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
-	padding:  3rem;
+	padding:  1rem;
 }
 
 #userTrendPostContainer h2 {
@@ -23,7 +23,6 @@
 	border:  2px solid var(--color-scheme-five);
 	box-shadow: -1px 1px 3px 1px var(--color-scheme-five);
 	background-color: var(--color-scheme-four);
-	/*border-radius: 20px;*/
 	flex-flow: row wrap;
 }
 
@@ -35,7 +34,7 @@
 }
 
 #profileInfo div:first-child {
-	flex: 1;
+	flex: 2;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -60,7 +59,6 @@
 	gap:  1rem;
 	padding:  1rem;
 	border:  2px solid var(--color-scheme-five);
-	/*border-radius: 20px;*/
 	box-shadow: -1px 1px 3px 1px var(--color-scheme-five);
 	background-color: var(--color-scheme-four);
 	text-align: center;
@@ -87,7 +85,8 @@
 	flex: 2.5;
 	display: flex;
 	flex-direction: column;
-	padding: 1.5rem;
+	padding-left: 2rem;
+	padding-top: 1rem;
 	gap: 2rem;
 	min-width: 50%;
 }
@@ -103,12 +102,6 @@
 	display: flex;
 	flex-direction: column;
 	overflow-y:  auto;
-}
-
-hr {
-	border-color: var(--color-scheme-five);
-	background-color: var(--color-scheme-five);
-	height: 1px;
 }
 
 .feedPost {

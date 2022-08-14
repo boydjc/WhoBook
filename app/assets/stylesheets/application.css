@@ -45,22 +45,22 @@ body {
 
     15.5% {
         transform: translateY(50px);
-        opacity: 0.8;
+        opacity: 1;
     }
 
     37.5% {
         transform: translateY(50px);
-        opacity: 0.8;
+        opacity: 1;
     }
 
     62.5% {
         transform: translateY(50px);
-        opacity: 0.8;
+        opacity: 1;
     }
 
     85.5% {
         transform: translateY(50px);
-        opacity: 0.8;
+        opacity: 1;
     }
 
     100% {
@@ -70,7 +70,7 @@ body {
 }
 
 .notice {
-    position: absolute;
+    position: fixed;
     top: -50px;
     width: 100%;
     display: flex;
@@ -87,7 +87,7 @@ body {
 }
 
 .alert {
-    position: absolute;
+    position: fixed;
     top: -50px;
     width: 100%;
     display: flex;
@@ -138,13 +138,15 @@ button {
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     box-shadow: 0px 2px 0px #000;
     border-radius: 10px;
-    transition: box-shadow 0.3s, transform 0.3s;
+    transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s, color 0.3s;
 }
 
 button:hover {
     cursor: pointer;
     box-shadow: none;
     transform: translateY(3px);
+    background-color: var(--color-scheme-two);
+    color: var(--color-scheme-one);
 }
 
 #navBar {
@@ -159,6 +161,7 @@ button:hover {
 #mainContent {
     display:  flex;
     flex-flow: row wrap;
+    padding: 1rem;
 }
 
 #footer {
