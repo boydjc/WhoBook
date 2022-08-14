@@ -43,11 +43,15 @@
 
   <div id="feedContainer">
     <% if user_signed_in? %>
-      <h1>Create a post!</h1>
-      <div id="newPostFormContainer">
-        <%= render 'posts/form', post: @post %>
+      <div id="newPostFormContainer" class="formHide">
+        <div id="newPostFormHeader">
+          <h1>Create a post!</h1>
+          <a href="#" id="newPostCloseLink">X</a>
+        </div>
+        <div id="newPostForm">
+          <%= render 'posts/form', post: @post %>
+        </div>
       </div>
-      <hr>
     <% end %>  
     <h1>Posts</h1>
     <div id="feedPostContainer">
