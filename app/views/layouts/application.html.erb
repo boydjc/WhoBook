@@ -3,6 +3,7 @@
   <head>
     <title>WhoBook</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-visit-control" content="reload">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -26,10 +27,10 @@
       <h1><%= link_to "WhoBook", posts_path %></h1>
       <div id="navBar">
         <% if user_signed_in? %>
-          <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
           <% if action_name == "index" %>
             <button id="newPostButton" type="button">New Post</button>
           <% end %>
+          <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
         <% else %>
           <%= button_to "Sign up", new_user_registration_path, method: :get %>
           <%= button_to "Login", new_user_session_path, method: :get%>
