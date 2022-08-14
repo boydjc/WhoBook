@@ -31,15 +31,23 @@
 
   <div id="postLinksContainer" >
     <%= button_to "Back to posts", posts_path, method: :get %>
-    <% if user_signed_in? && current_user == @post.user %>
-      <div id="postEditDeleteContainer">
-        <div id="postEditLink">
-          <%= button_to "Edit this post", edit_post_path(@post), method: :get %>
+    <% if user_signed_in? %>
+      <% if current_user == @post.user %>
+        <div id="postEditDeleteContainer">
+          <div id="postEditLink">
+            <%= button_to "Edit this post", edit_post_path(@post), method: :get %>
+          </div>
+          <div id="postDeleteLink" data-controller="posts">
+            <%= button_to "Delete this post", @post, method: :delete, data: { action: "click->posts#delete" } %>
+          </div>
         </div>
-        <div id="postDeleteLink" data-controller="posts">
-          <%= button_to "Delete this post", @post, method: :delete, data: { action: "click->posts#delete" } %>
-        </div>
-      </div>
+      <% elsif current_user.username != @post.user.username %>
+        <% if current_user.likes.find_by(post_id: @post.id) %> 
+          <%= button_to "Unlike", like_path(id: @user.likes.find_by(post_id: @post.id).id), method: :delete %>
+        <% else %>
+          <%= button_to "Like", likes_path(user_id: current_user.id, post_id: @post.id), method: :post %>
+        <% end %>
+      <% end %>
     <% end %>
   </div>
 </div> 
