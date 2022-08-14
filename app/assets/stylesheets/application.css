@@ -21,7 +21,6 @@
     --color-scheme-three: #ffffff; 
     --color-scheme-four: #f2f2f2;
     --color-scheme-five: #52ab98;
-
 }
 
 
@@ -127,6 +126,8 @@ body {
 #navBar button {
     text-decoration: none;
     font-size:  1.6rem;
+    width: 130px;
+    height: 50px;
 }
 
 button {

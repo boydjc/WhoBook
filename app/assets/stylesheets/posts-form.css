@@ -1,8 +1,53 @@
 #newPostFormContainer {
 	border:  2px solid var(--color-scheme-five);
 	border-radius: 20px;
+	background-color:  var(--color-scheme-four);
 	box-shadow: 1px 1px 3px 1px var(--color-scheme-five);
 	padding: 2rem;
+	position: fixed;
+	margin-right: auto;
+	margin-left: auto;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	width: 45%;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+@keyframes fadeAppearFromTop {
+	from {
+		top: 0px;
+		opacity: 0;
+	}
+
+	to {
+		top: 80px;
+		opacity: 1;
+	}
+
+}
+
+.formShow {
+	animation-name: fadeAppearFromTop;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	display: flex;
+}
+
+.formHide {
+	display: none;
+}
+
+#newPostFormHeader {
+	display: flex;
+	justify-content: space-between;
+}
+
+#newPostCloseLink {
+	text-decoration: none;
+	font-size: 2rem;
+	color: var(--color-template-five);
 }
 
 #new_post {
