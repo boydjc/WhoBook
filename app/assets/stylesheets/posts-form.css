@@ -30,7 +30,8 @@
 
 .formShow {
 	animation-name: fadeAppearFromTop;
-	animation-duration: 1s;
+	animation-duration: 0.7s;
+	animation-timing-function: ease-out;
 	animation-fill-mode: forwards;
 	display: flex;
 }

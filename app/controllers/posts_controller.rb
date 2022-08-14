@@ -38,7 +38,7 @@ class PostsController < ApplicationController
         format.html { redirect_to posts_path, notice: "Post was successfully created." }
         format.json { render :show, status: :created, location: @post }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        format.html { redirect_to posts_path, alert: "Post not created. You had missing fields in the form." }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
@@ -68,7 +68,7 @@ class PostsController < ApplicationController
       @post.destroy
 
       respond_to do |format|
-        format.html { redirect_to posts_url, notice: "Post was successfully destroyed.", status: 303 }
+        format.html { redirect_to posts_url, notice: "Post was successfully deleted.", status: 303 }
         format.json { head :no_content }
       end
     else
